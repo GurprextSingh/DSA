@@ -1,37 +1,40 @@
-#include<iostream>
-#include<vector>
+// WAP to find a target vaule in a vector (it should be dynamic)
+#include <iostream>
+#include <vector>
 using namespace std;
 
-int main() {
-    vector<int> vec;
-    int n, input, target;
+int main()
+{
+  vector<int> vec;
+  int n, input, target;
 
-    // Step 1: Take number of elements
-    cout << "Enter number of elements: ";
-    cin >> n;
+  cout << "Enter number of elements: ";
+  cin >> n;
 
-    // Step 2: Take elements into vector
-    cout << "Enter " << n << " elements:\n";
-    for(int i = 0; i < n; i++) {
-        cin >> input;
-        vec.push_back(input);
+  cout << "Enter " << n << " elements:\n";
+  for (int i = 0; i < n; i++)
+  {
+    cin >> input;
+    vec.push_back(input);
+  }
+  cout<<"Enter values are: "<<endl;
+  for (int val : vec)
+  {
+    cout << val << " ";
+  }
+
+  cout << "Enter the target value to count: ";
+  cin >> target;
+  cout << target << " is at below indices: " << endl;
+  for (int i = 0; i < vec.size(); i++)
+  {
+    if (vec[i] == target)
+    {
+      cout << i << " " << endl;
+    }
+    else{
+      cout<<"NO Index";
     }
 
-    // Step 3: Ask for the target value
-    cout << "Enter the target value to count: ";
-    cin >> target;
-
-    // Step 4: Count how many times target appears
-    int count = 0;
-    cout << "Values in Vector are: ";
-    for (int val : vec) {
-        cout << val << " ";
-        if (val == target) {
-            count++;
-        }
-    }
-
-    cout << "\n" << target << " appears " << count << " times in the vector.\n";
-
-    return 0;
+  }
 }
