@@ -25,6 +25,7 @@ int main()
     {
       nums=nums^val;
     }
+    
     cout<<"The Single Number in vector is: "<<nums<<endl;
     
 }
