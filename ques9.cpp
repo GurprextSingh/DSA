@@ -4,8 +4,11 @@
 using namespace std;
 int main(){
   // -infinite = INT_MAx
-  int nums[5];
-  int size =5;
+  int size;
+  cout<<"Entter size of Array: "<<endl;
+  cin>>size;
+  int nums[size];
+  
   int smallest =INT_MAX;
   int largest =INT_MIN;
   cout<<"Enter Value for array"<<endl;
